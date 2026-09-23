@@ -68,6 +68,7 @@ textarea{resize:vertical;min-height:130px}
 .floating-hearts span:nth-child(3){left:15%;bottom:16%;animation-delay:2s}.floating-hearts span:nth-child(4){right:8%;bottom:22%;animation-delay:3s}.floating-hearts span:nth-child(5){left:48%;top:7%;animation-delay:1.5s}
 @keyframes float{50%{transform:translateY(-16px) rotate(8deg)}}
 .footer{text-align:center;color:#73858e;font-size:11px;margin-top:16px;font-weight:500}
+.footer .heart{color:#e0435c}
 @media(max-width:520px){
   .page{width:94vw;padding:18px 0}
   .card{padding:28px 20px 22px;min-height:auto;border-radius:24px}

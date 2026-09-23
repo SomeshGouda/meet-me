@@ -17,8 +17,8 @@ A pastel, multi-step invitation website inspired by the reference video.
 Open `script.js` and change:
 
 ```js
-YOUR_EMAIL: "cx27somesh",
-INSTAGRAM_USERNAME: "somesh___09",
+YOUR_EMAIL: "YOUR_EMAIL@example.com",
+INSTAGRAM_USERNAME: "YOUR_INSTAGRAM_USERNAME",
 ```
 
 For email delivery, the form uses FormSubmit. On the first submission, FormSubmit sends a confirmation email to the configured address; confirm it once before relying on the form. See https://formsubmit.co/ for details.

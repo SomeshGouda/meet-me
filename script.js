@@ -5,8 +5,8 @@
   3) THANK_YOU_URL: leave blank unless you want a custom thank-you page.
 */
 const CONFIG = {
-  YOUR_EMAIL: "cx27somesh@gmail.com",
-  INSTAGRAM_USERNAME: "somesh___09",
+  YOUR_EMAIL: "YOUR_EMAIL@example.com",
+  INSTAGRAM_USERNAME: "YOUR_INSTAGRAM_USERNAME",
   THANK_YOU_URL: ""
 };
 
@@ -17,9 +17,13 @@ if(CONFIG.YOUR_EMAIL.includes("YOUR_EMAIL") || CONFIG.INSTAGRAM_USERNAME.include
 const state = { answer:"", date:"", time:"", vibe:"", message:"" };
 const screens = [...document.querySelectorAll(".screen")];
 const dots = document.getElementById("stepDots");
+const declinedIndex = screens.findIndex(s=>s.id==="declinedScreen");
 
 for(let i=0;i<screens.length;i++){
-  const d=document.createElement("i"); if(i===0)d.classList.add("active"); dots.appendChild(d);
+  const d=document.createElement("i");
+  if(i===0)d.classList.add("active");
+  if(i===declinedIndex)d.style.display="none";
+  dots.appendChild(d);
 }
 
 function goTo(step){
@@ -27,7 +31,11 @@ function goTo(step){
   [...dots.children].forEach((d,i)=>d.classList.toggle("active",i===step));
   window.scrollTo({top:0,behavior:"smooth"});
 }
-function chooseAnswer(value){ state.answer=value; goTo(1); }
+function chooseAnswer(value){
+  state.answer=value;
+  if(value==="No"){ goTo(declinedIndex); return; }
+  goTo(1);
+}
 function nextFromDate(){
   const date=document.getElementById("date").value;
   const time=document.getElementById("time").value;

@@ -24,11 +24,17 @@
         <p class="eyebrow">Let's plan something</p>
         <h1>Let's find a time that works</h1>
         <p class="sub">Choose what works for you and send me your preferred time. Simple, quick, and easy.</p>
-        <div class="choice-row three">
+        <div class="choice-row">
           <button class="primary" onclick="chooseAnswer('Yes')">Sounds good ✓</button>
-          <button class="secondary" onclick="chooseAnswer('Maybe')">Maybe</button>
-          <button class="secondary" onclick="chooseAnswer('Not this time')">Not this time</button>
+          <button class="secondary" onclick="chooseAnswer('No')">Not this time</button>
         </div>
+      </div>
+
+      <div class="screen" data-step="declined" id="declinedScreen">
+        <p class="eyebrow">No worries</p>
+        <h2>Thanks for letting me know.</h2>
+        <p class="sub">If you'd like to connect sometime later, you can always use this link again.</p>
+        <button class="back" onclick="goTo(0)">← Back</button>
       </div>
 
       <div class="screen" data-step="1">
@@ -99,7 +105,7 @@
       </div>
     </section>
 
-    <p class="footer">Built with care by Somesh Gouda ❤</p>
+    <p class="footer">Built with care by Somesh Gouda <span class="heart">❤</span></p>
   </main>
 
   <script src="script.js"></script>
