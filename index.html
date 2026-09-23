@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Plan 💌</title>
+  <meta name="description" content="A cute interactive invitation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true">
+    <span>♡</span><span>✦</span><span>♡</span><span>✧</span><span>♡</span>
+  </div>
+
+  <main class="page">
+    <section class="card" id="card">
+      <div class="step-dots" id="stepDots"></div>
+
+      <div class="screen active" data-step="0">
+        <div class="emoji">💌</div>
+        <p class="eyebrow">A tiny question for you</p>
+        <h1>So... will you meet me?</h1>
+        <p class="sub">I made this little page instead of sending a boring text. 😌</p>
+        <div class="choice-row">
+          <button class="primary" onclick="chooseAnswer('Yes')">Yes, why not? 💗</button>
+          <button class="secondary" onclick="chooseAnswer('Maybe')">Maybe 👀</button>
+        </div>
+        <button class="text-btn" onclick="chooseAnswer('Not this time')">Not this time</button>
+      </div>
+
+      <div class="screen" data-step="1">
+        <div class="emoji">📅🐾</div>
+        <p class="eyebrow">Step 1</p>
+        <h2>So... when are you free?</h2>
+        <label>Pick a day 📅</label>
+        <input id="date" type="date">
+        <label>What time? ⏰</label>
+        <select id="time">
+          <option value="">Select a time...</option>
+          <option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option>
+          <option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option>
+          <option>4:00 PM</option><option>5:00 PM</option><option>6:00 PM</option>
+          <option>7:00 PM</option><option>8:00 PM</option>
+        </select>
+        <button class="primary" onclick="nextFromDate()">Set the date! ♥</button>
+        <button class="back" onclick="goTo(0)">← Back</button>
+      </div>
+
+      <div class="screen" data-step="2">
+        <div class="emoji">✨</div>
+        <p class="eyebrow">Step 2</p>
+        <h2>What kind of plan sounds nice?</h2>
+        <div class="option-grid" id="vibeOptions">
+          <button onclick="pickVibe(this,'Coffee & chat ☕')">Coffee & chat ☕</button>
+          <button onclick="pickVibe(this,'Food adventure 🍜')">Food adventure 🍜</button>
+          <button onclick="pickVibe(this,'Walk & talk 🌿')">Walk & talk 🌿</button>
+          <button onclick="pickVibe(this,'Movie time 🎬')">Movie time 🎬</button>
+          <button onclick="pickVibe(this,'Surprise me 🎁')">Surprise me 🎁</button>
+          <button onclick="pickVibe(this,'Keep it simple 🙂')">Keep it simple 🙂</button>
+        </div>
+        <button class="primary" onclick="nextFromVibe()">That sounds good →</button>
+        <button class="back" onclick="goTo(1)">← Back</button>
+      </div>
+
+      <div class="screen" data-step="3">
+        <div class="emoji">💭</div>
+        <p class="eyebrow">Last little thing</p>
+        <h2>Anything you want me to know?</h2>
+        <textarea id="message" rows="5" maxlength="500" placeholder="Write a note..."></textarea>
+        <button class="primary" onclick="showSummary()">Send my response 💌</button>
+        <button class="back" onclick="goTo(2)">← Back</button>
+      </div>
+
+      <div class="screen" data-step="4">
+        <div class="success-icon">✓</div>
+        <p class="eyebrow">Response ready</p>
+        <h2>Perfect. 💗</h2>
+        <p class="sub">Here’s what you chose:</p>
+        <div class="summary" id="summary"></div>
+        <p class="small">Tap below to send the response by email, or open Instagram and send a DM directly.</p>
+
+        <form id="responseForm" method="POST">
+          <input type="hidden" name="_subject" value="New invitation response 💌">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="answer" id="fAnswer">
+          <input type="hidden" name="date" id="fDate">
+          <input type="hidden" name="time" id="fTime">
+          <input type="hidden" name="vibe" id="fVibe">
+          <input type="hidden" name="message" id="fMessage">
+          <input type="hidden" name="_captcha" value="false">
+          <button class="primary" type="submit">Send response by email 📧</button>
+        </form>
+
+        <a class="instagram" id="instagramBtn" target="_blank" rel="noopener">Open Instagram DM 📸</a>
+        <button class="back" onclick="goTo(3)">← Change something</button>
+      </div>
+    </section>
+
+    <p class="footer">made with a little effort & a lot of CSS ✦</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
