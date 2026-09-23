@@ -44,8 +44,8 @@ button:active,.instagram:active{transform:translateY(0)}
 button:focus-visible,.instagram:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .primary{background:linear-gradient(135deg,#416f85,#315b72);color:white;box-shadow:0 9px 24px rgba(49,91,114,.22);margin-top:18px}
 .primary:hover{box-shadow:0 14px 32px rgba(49,91,114,.32);background:linear-gradient(135deg,#4a7c92,#3a6a80)}
-.secondary{background:white;color:var(--accent-dark);border:1px solid var(--line)}
-.secondary:hover{background:var(--accent-soft);border-color:#9db5c1}
+.secondary{background:var(--accent-soft);color:var(--accent-dark);border:1.5px solid #b9cdd5;font-weight:600}
+.secondary:hover{background:#dce9ee;border-color:var(--accent)}
 .text-btn,.back{background:transparent;color:#6e7f88;font-size:13px;margin:12px auto 0;padding:7px;min-height:auto;width:fit-content;display:flex}
 .back:hover{color:var(--accent-dark);transform:none;text-decoration:underline}
 .choice-row .primary,.choice-row .secondary{margin-top:0}
