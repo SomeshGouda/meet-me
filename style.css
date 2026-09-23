@@ -46,8 +46,9 @@ button:focus-visible,.instagram:focus-visible{outline:2px solid var(--accent);ou
 .primary:hover{box-shadow:0 14px 32px rgba(49,91,114,.32);background:linear-gradient(135deg,#4a7c92,#3a6a80)}
 .secondary{background:white;color:var(--accent-dark);border:1px solid var(--line)}
 .secondary:hover{background:var(--accent-soft);border-color:#9db5c1}
-.text-btn,.back{background:transparent;color:#6e7f88;font-size:13px;margin:12px auto 0;padding:7px;min-height:auto;width:auto;display:inline-flex}
+.text-btn,.back{background:transparent;color:#6e7f88;font-size:13px;margin:12px auto 0;padding:7px;min-height:auto;width:fit-content;display:flex}
 .back:hover{color:var(--accent-dark);transform:none;text-decoration:underline}
+.choice-row .primary,.choice-row .secondary{margin-top:0}
 label{display:block;font-size:13px;font-weight:700;color:#4d6570;margin:18px 0 7px}
 input,select,textarea{width:100%;border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:15px;padding:14px 15px;font:inherit;color:var(--ink);outline:none;transition:border-color .2s ease,box-shadow .2s ease}
 input:hover,select:hover,textarea:hover{border-color:#b7c8ce}
