@@ -10,6 +10,10 @@ const CONFIG = {
   THANK_YOU_URL: ""
 };
 
+if(CONFIG.YOUR_EMAIL.includes("YOUR_EMAIL") || CONFIG.INSTAGRAM_USERNAME.includes("YOUR_INSTAGRAM")){
+  console.warn("⚠️ Update CONFIG.YOUR_EMAIL and CONFIG.INSTAGRAM_USERNAME at the top of script.js before publishing.");
+}
+
 const state = { answer:"", date:"", time:"", vibe:"", message:"" };
 const screens = [...document.querySelectorAll(".screen")];
 const dots = document.getElementById("stepDots");
