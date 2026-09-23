@@ -21,20 +21,20 @@
 
       <div class="screen active" data-step="0">
         <div class="emoji">💌</div>
-        <p class="eyebrow">A tiny question for you</p>
-        <h1>So... will you meet me?</h1>
-        <p class="sub">I made this little page instead of sending a boring text. 😌</p>
-        <div class="choice-row">
-          <button class="primary" onclick="chooseAnswer('Yes')">Yes, why not? 💗</button>
-          <button class="secondary" onclick="chooseAnswer('Maybe')">Maybe 👀</button>
+        <p class="eyebrow">Let's plan something</p>
+        <h1>Let's find a time that works</h1>
+        <p class="sub">Choose what works for you and send me your preferred time. Simple, quick, and easy.</p>
+        <div class="choice-row three">
+          <button class="primary" onclick="chooseAnswer('Yes')">Sounds good ✓</button>
+          <button class="secondary" onclick="chooseAnswer('Maybe')">Maybe</button>
+          <button class="secondary" onclick="chooseAnswer('Not this time')">Not this time</button>
         </div>
-        <button class="text-btn" onclick="chooseAnswer('Not this time')">Not this time</button>
       </div>
 
       <div class="screen" data-step="1">
-        <div class="emoji">📅🐾</div>
+        <div class="emoji">📅</div>
         <p class="eyebrow">Step 1</p>
-        <h2>So... when are you free?</h2>
+        <h2>Choose a date and time</h2>
         <label>Pick a day 📅</label>
         <input id="date" type="date">
         <label>What time? ⏰</label>
@@ -50,25 +50,25 @@
       </div>
 
       <div class="screen" data-step="2">
-        <div class="emoji">✨</div>
+        <div class="emoji">✦</div>
         <p class="eyebrow">Step 2</p>
-        <h2>What kind of plan sounds nice?</h2>
+        <h2>What are we planning?</h2>
         <div class="option-grid" id="vibeOptions">
-          <button onclick="pickVibe(this,'Coffee & chat ☕')">Coffee & chat ☕</button>
-          <button onclick="pickVibe(this,'Food adventure 🍜')">Food adventure 🍜</button>
-          <button onclick="pickVibe(this,'Walk & talk 🌿')">Walk & talk 🌿</button>
-          <button onclick="pickVibe(this,'Movie time 🎬')">Movie time 🎬</button>
-          <button onclick="pickVibe(this,'Surprise me 🎁')">Surprise me 🎁</button>
-          <button onclick="pickVibe(this,'Keep it simple 🙂')">Keep it simple 🙂</button>
+          <button onclick="pickVibe(this,'Meeting / Discussion')">Meeting / Discussion</button>
+          <button onclick="pickVibe(this,'Coffee / Chat')">Coffee / Chat</button>
+          <button onclick="pickVibe(this,'Project / Work')">Project / Work</button>
+          <button onclick="pickVibe(this,'Catch-up')">Catch-up</button>
+          <button onclick="pickVibe(this,'Event / Outing')">Event / Outing</button>
+          <button onclick="pickVibe(this,'Something else')">Something else</button>
         </div>
         <button class="primary" onclick="nextFromVibe()">That sounds good →</button>
         <button class="back" onclick="goTo(1)">← Back</button>
       </div>
 
       <div class="screen" data-step="3">
-        <div class="emoji">💭</div>
-        <p class="eyebrow">Last little thing</p>
-        <h2>Anything you want me to know?</h2>
+        <div class="emoji">💬</div>
+        <p class="eyebrow">Step 3</p>
+        <h2>Anything you want to add?</h2>
         <textarea id="message" rows="5" maxlength="500" placeholder="Write a note..."></textarea>
         <button class="primary" onclick="showSummary()">Send my response 💌</button>
         <button class="back" onclick="goTo(2)">← Back</button>
@@ -99,7 +99,7 @@
       </div>
     </section>
 
-    <p class="footer">made with a little effort & a lot of CSS ✦</p>
+    <p class="footer">Built with care by Somesh Gouda ❤</p>
   </main>
 
   <script src="script.js"></script>
