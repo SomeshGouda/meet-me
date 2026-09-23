@@ -5,8 +5,8 @@
   3) THANK_YOU_URL: leave blank unless you want a custom thank-you page.
 */
 const CONFIG = {
-  YOUR_EMAIL: "YOUR_EMAIL@example.com",
-  INSTAGRAM_USERNAME: "YOUR_INSTAGRAM_USERNAME",
+  YOUR_EMAIL: "cx27somesh@gmail.com",
+  INSTAGRAM_USERNAME: "somesh___09",
   THANK_YOU_URL: ""
 };
 
